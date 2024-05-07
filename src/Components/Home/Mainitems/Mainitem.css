@@ -1,0 +1,7 @@
+.cardZoom{
+    transition: transform 0.1s;
+}
+.cardZoom:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}

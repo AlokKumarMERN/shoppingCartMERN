@@ -1,0 +1,11 @@
+.groupImg{
+    padding: 2px;
+}
+.itemImage{
+    width: 50px;
+
+}
+.itemImage:hover{
+    padding: 5px;
+    cursor: pointer;
+}
