@@ -1,0 +1,16 @@
+.button-group button {
+    background-color: transparent;
+    /* border: none;
+    outline: none; */
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+  
+  .button-group button.active {
+    text-decoration: underline;
+    color: coral;
+  }
+  .button-group button.active:hover {
+    color: aqua;
+    
+  }

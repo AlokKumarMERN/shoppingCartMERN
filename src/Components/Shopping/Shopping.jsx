@@ -1,16 +1,16 @@
-import React from 'react'
-import Mainitems from '../Home/Mainitems/Mainitems'
-import Navigation from '../Home/navigation/Navigation'
-import Footer from '../Home/Footer/Footer'
+import React from "react";
+import Mainitems from "../Home/Mainitems/Mainitems";
+import Navigation from "../Home/navigation/Navigation";
+import Footer from "../Home/Footer/Footer";
 
-const Shopping = () => {
+const Shopping = ({ act }) => {
   return (
     <div>
-      <Navigation/>
-      <Mainitems/>
-      <Footer/>
+      <Navigation act={act} />
+      <Mainitems />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Shopping
+export default Shopping;

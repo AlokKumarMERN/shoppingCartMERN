@@ -8,7 +8,8 @@ import { Link } from "react-router-dom";
 import { Navbar, Container, Nav, Form } from "react-bootstrap";
 import "./Navigation.css";
 import Buttons from "../../Button/Button";
-const Navigation = () => {
+const Navigation = ({act}) => {
+  console.log("navigation :",act);
   return (
     <Navbar expand="lg" className="bg-body-tertiary p-2 sticky-top shadow mb-2">
       <Container fluid>
@@ -22,11 +23,11 @@ const Navigation = () => {
           >
             {/* for creating navigatin button at top */}
             <Link to="/">
-              <Buttons name="Home" />
+              <Buttons name="Home" act={act}/>
             </Link>
 
-            <Link to="/Shopping">
-              <Buttons name="Shopping" />
+            <Link to="/Shopping" >
+              <Buttons name="Shopping" act={act}/>
             </Link>
 
             <Buttons name="Contect" />

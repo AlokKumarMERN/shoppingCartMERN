@@ -6,10 +6,11 @@ import Banner2 from "./Banner2/Banner2";
 import Footer from "./Footer/Footer";
 import Mainitems from "./Mainitems/Mainitems";
 
-const Home = () => {
+const Home = ({act}) => {
+  console.log(`home ${act}`);
   return (
     <div>
-        <Navigation/>
+        <Navigation act={act}/>
         <Banner/>
         <Carouselinhome/>
         <Banner2/>

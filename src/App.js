@@ -7,8 +7,6 @@ import {
 } from "react-router-dom";
 import Home from './Components/Home/Home';
 import Shopping from './Components/Shopping/Shopping';
-import Confusion from './Components/Confusion/Confusion';
-import CartDetails from './Components/CartDetails/CartDetails';
 
 function App(){
     return (
@@ -18,16 +16,15 @@ function App(){
           <Routes>
             <Route
               path="/"
-              element={<Home />}
+              element={<Home act={"Home"}/>}
             ></Route>
             <Route
               path="/Shopping"
-              element={<Shopping />}
+              element={<Shopping act={"Shopping"}/>}
             ></Route>
           </Routes>
         </div>
        </Router>
-       {/* <CartDetails/> */}
       </>
     );
 }
