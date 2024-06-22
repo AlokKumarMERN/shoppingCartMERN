@@ -6,7 +6,7 @@ const CartDetails = () => {
   const img1 = "https://rukminim2.flixcart.com/image/612/612/xif0q/hair-oil/e/g/s/-original-imagsgghtyp6kf2w.jpeg?q=70";
   const img2 = "https://rukminim2.flixcart.com/image/612/612/xif0q/hair-oil/9/u/l/30-godfather-lite-beard-and-moustache-oil-30-ml-non-sticky-light-original-imahyghzamad7jjq.jpeg?q=70"
   const img3 = "https://rukminim2.flixcart.com/image/612/612/xif0q/hair-oil/n/s/2/-original-imagw3nugerfvju6.jpeg?q=70"
-  const [show, setShow] = useState(img2)
+  const [show, setShow] = useState(img1)
   const [con, setCon] = useState(false);
   
   const imgEnter = (img) =>{
@@ -17,22 +17,26 @@ const CartDetails = () => {
   }
   return (
     <>
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-4 bg-danger d-flex">
-            <ul class="nav flex-column">
-              <li class="nav-item groupImg">
+      <div className="container-fluid containerParent">
+        <div className="row ">
+          
+          <div className="col-md-5 containerChildOne">
+          
+          <div className="row">  
+            <div className="col-md-2 check">
+            <ul class="">
+              <li class="groupImg">
                 <img
                   src={
                     img1
                   }
-                  className="img-fluid itemImage"
+                  className="itemImage"
                   onMouseEnter={() => imgEnter(img1)}
                   // onMouseOut={() => imgDown(img2)}
                   alt="Description of the image"
                 />
               </li>
-              <li class="nav-item groupImg">
+              <li class="groupImg">
                 <img
                   src={
                     img2
@@ -42,7 +46,7 @@ const CartDetails = () => {
                   className="itemImage"
                 />
               </li>
-              <li class="nav-item groupImg">
+              <li class="groupImg">
                 <img
                   src={
                     img3
@@ -52,17 +56,75 @@ const CartDetails = () => {
                 />
               </li>   
             </ul>
+            </div>
 
-            <div>
-                  <img className="" src={show} alt="somting bad happend" />
+            <div className="col-md-10 check1">
+                  <img className="imgFull" src={show} alt="somting bad happend"/>
             </div>
           </div>
+          </div>
 
+        
 
-          <div className="col-8 bg-success">
+          <div className="col-md-7 containerChildTwo">
             <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+            <h1>hii</h1>
+
           </div>
         </div>
+        
+      </div>
+
+      <div>
+        <h1>kjdfkdsjfskfj</h1>
+        <h1>kjdfkdsjfskfj</h1>
+        <h1>kjdfkdsjfskfj</h1>
+        <h1>kjdfkdsjfskfj</h1>
+        <h1>kjdfkdsjfskfj</h1>
+        <h1>kjdfkdsjfskfj</h1>
       </div>
     </>
   );

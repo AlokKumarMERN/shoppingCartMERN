@@ -6,9 +6,9 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Carts = ({name, img, para}) => {
-    const btnClick = () =>{
+    // const btnClick = () =>{
         
-    }
+    // }
   return (
     <>
     <Card className=" mt-2 shadow-lg cardZoom stretch-col">

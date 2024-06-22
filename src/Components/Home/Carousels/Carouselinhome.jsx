@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./Carouselinhome.css";
+import { useCounter } from "../../../CounterContext/CounterContext";
 
 const Carouselinhome = () => {
-  const [index, setIndex] = useState(0);
+  // const {index, setIndex} = useCounter()
+  // const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {

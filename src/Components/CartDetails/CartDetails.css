@@ -1,11 +1,45 @@
 .groupImg{
-    padding: 2px;
+    padding: 2px 0px;
 }
 .itemImage{
-    width: 50px;
+    width: 100%;
+    background-color: aqua;
 
+
+}
+.imgFull{
+    width: 100%;
+}
+.check{
+    background-color: red;
+}
+.check1{
+    background-color: rgb(114, 36, 36);
+}
+ul{
+    list-style: none;
+    padding-left: 0;
 }
 .itemImage:hover{
     padding: 5px;
     cursor: pointer;
+}
+.containerParent{
+    padding: 5px 10px;
+    /* height: 500px; */
+    display: flex;
+    /* position: relative; */
+   background-color: aqua;
+   /* width: 100%; */
+    /* position: relative; */
+ 
+}
+.containerChildOne{
+    position: sticky;
+    /* top: 100px; */
+   background-color: blueviolet;
+}
+.containerChildTwo{
+    background-color: burlywood;
+
 }

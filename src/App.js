@@ -7,6 +7,9 @@ import {
 } from "react-router-dom";
 import Home from './Components/Home/Home';
 import Shopping from './Components/Shopping/Shopping';
+import SignUpPage from './Components/SignUp/SignUpPage';
+import LoginPage from './Components/LoginPage/LoginPage';
+
 
 function App(){
     return (
@@ -16,11 +19,19 @@ function App(){
           <Routes>
             <Route
               path="/"
-              element={<Home act={"Home"}/>}
+              element={<Home />}
             ></Route>
             <Route
               path="/Shopping"
-              element={<Shopping act={"Shopping"}/>}
+              element={<Shopping />}
+            ></Route>
+            <Route
+              path="/signup"
+              element={<SignUpPage />}
+            ></Route>
+            <Route
+              path="/login"
+              element={<LoginPage />}
             ></Route>
           </Routes>
         </div>

@@ -1,67 +1,58 @@
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import { Form, FormControl } from 'react-bootstrap';
+import { Link, NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faMagnifyingGlass,
-  faUser,
   faCartShopping,
+  faUser,
+  faSearch 
 } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
-import { Navbar, Container, Nav, Form } from "react-bootstrap";
-import "./Navigation.css";
-import Buttons from "../../Button/Button";
-const Navigation = ({act}) => {
-  console.log("navigation :",act);
+
+
+function BasicExample() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary p-2 sticky-top shadow mb-2">
-      <Container fluid>
-        <Navbar.Toggle aria-controls="navbarScroll" />
-        <Navbar.Collapse id="navbarScroll">
-          {/* it is for small screen in inspacting  */}
-          <Nav
-            className=" me-auto my-lg-1 "
-            // style={{ maxHeight: '100px' }}
-            navbarScroll
-          >
-            {/* for creating navigatin button at top */}
-            <Link to="/">
-              <Buttons name="Home" act={act}/>
-            </Link>
-
-            <Link to="/Shopping" >
-              <Buttons name="Shopping" act={act}/>
-            </Link>
-
-            <Buttons name="Contect" />
-            <Buttons name="Feedback" />
-          </Nav>
-
-          <Form className="d-flex">
-            {/* shopping cart icon fonrawesome */}
-            <FontAwesomeIcon
-              className="fontAwesomeHover me-1 my-1 p-3 bg-white rounded-4 border border-primary-subtle"
+    <Navbar expand="lg" className="bg-body-tertiary">
+      <Container fluid className='mx-3'>
+        <Navbar.Brand as={Link} to="/">React-Bootstrap</Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Collapse>
+          <Nav className="ms-auto mx-2">
+            <Nav.Link as={NavLink} to="/" className=" ">Home</Nav.Link>
+            <Nav.Link as={NavLink} to="/shopping" className="">Shopping</Nav.Link>
+            
+            
+            <Nav.Link as={NavLink} to="/" className="mx-2"><FontAwesomeIcon
+              key="cartIcon"
+              // className="fontAwesomeHover me-1 my-1 p-3 bg-white rounded-4 border "
               icon={faCartShopping}
-            />
-            {/* user cart icon fontawesome */}
-            <FontAwesomeIcon
-              className="fontAwesomeHover me-1 my-1 p-3 bg-white rounded-4 border border-primary-subtle"
+            /></Nav.Link>
+
+            <Nav.Link as={NavLink} to="/signup" className="mx-2"><FontAwesomeIcon
+              key="cartIcon"
+              // className="fontAwesomeHover me-1 my-1 p-3 bg-white rounded-4 border "
               icon={faUser}
-            />
-            {/* search input box  */}
+            /></Nav.Link>
+          <Form className="d-flex">
             <Form.Control
-              type="search"
-              placeholder="Search items"
-              className="me-1 rounded-5 shadow-none my-1 border border-primary-subtle"
-              aria-label="Search"
+              type="text"
+              placeholder="Search"
+              className=" rounded-4"
             />
-            {/* search icon fontawesome */}
-            <FontAwesomeIcon
-              className="fontAwesomeHover me-3 my-1 p-3 bg-white rounded-4 border border-primary-subtle"
-              icon={faMagnifyingGlass}
-            />{" "}
-            {/* <Button variant="outline-success">Search</Button> */}
           </Form>
+
+            <Nav.Link as={NavLink} to="/" className="mx-2"><FontAwesomeIcon
+              key="cartIcon"
+              className=""
+              icon={faSearch}
+            /></Nav.Link>
+            
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
-};
-export default Navigation;
+}
+
+export default BasicExample;
