@@ -9,6 +9,7 @@ import Home from './Components/Home/Home';
 import Shopping from './Components/Shopping/Shopping';
 import SignUpPage from './Components/SignUp/SignUpPage';
 import LoginPage from './Components/LoginPage/LoginPage';
+import AddToCart from './Components/AddToCart/AddToCart';
 
 
 function App(){
@@ -33,6 +34,10 @@ function App(){
               path="/login"
               element={<LoginPage />}
             ></Route>
+            <Route
+              path="/addtocart"
+              element={<AddToCart />}
+            ></Route>
           </Routes>
         </div>
        </Router>
@@ -41,3 +46,5 @@ function App(){
 }
 
 export default App;
+
+

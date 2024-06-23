@@ -9,9 +9,17 @@ import {
   faUser,
   faSearch 
 } from "@fortawesome/free-solid-svg-icons";
+// import { useSelector } from 'react-redux';
+import { CartIcon} from '../../../icons';
+import {useSelector, useDispatch} from 'react-redux'
+
+
 
 
 function BasicExample() {
+  const dispatch = useDispatch();  
+  const { amount } = useSelector((store) => store.cart);
+
   return (
     <Navbar expand="lg" className="bg-body-tertiary">
       <Container fluid className='mx-3'>
@@ -23,11 +31,22 @@ function BasicExample() {
             <Nav.Link as={NavLink} to="/shopping" className="">Shopping</Nav.Link>
             
             
-            <Nav.Link as={NavLink} to="/" className="mx-2"><FontAwesomeIcon
+            {/* <Nav.Link as={NavLink} to="/addtocart" className="mx-2"><FontAwesomeIcon
               key="cartIcon"
-              // className="fontAwesomeHover me-1 my-1 p-3 bg-white rounded-4 border "
               icon={faCartShopping}
-            /></Nav.Link>
+            /></Nav.Link> */}
+
+        <Nav.Link as={NavLink} to="/addtocart" className="mx-2">
+        <div className='nav-center'>
+            {/* <h3>Amazon</h3> */}
+        <div className='nav-container'> 
+            <CartIcon />
+                <div className='amount-container'>
+                    <p className='total-amount'>{amount}</p>
+                </div>
+        </div>
+        </div>
+        </Nav.Link>
 
             <Nav.Link as={NavLink} to="/signup" className="mx-2"><FontAwesomeIcon
               key="cartIcon"
