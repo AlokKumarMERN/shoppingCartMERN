@@ -31,10 +31,6 @@ function BasicExample() {
             <Nav.Link as={NavLink} to="/shopping" className="">Shopping</Nav.Link>
             
             
-            {/* <Nav.Link as={NavLink} to="/addtocart" className="mx-2"><FontAwesomeIcon
-              key="cartIcon"
-              icon={faCartShopping}
-            /></Nav.Link> */}
 
         <Nav.Link as={NavLink} to="/addtocart" className="mx-2">
         <div className='nav-center'>
